@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bingo Game</title>
+    <link rel="stylesheet" href="./game.css">
+    <link rel="icon" type="image/x-icon" href="./Assets/logo.jpg">
+</head>
+
+<body>
+    <nav>
+        <div class="contain space-evenly flex align-center ">
+		<a href="inst"><img src="./Assets/Instructions.png" alt="instructions"></a>
+        <div class="dropdown">
+            <p>Bingo is a two player game and it is super fun to play.</p>
+            <p>* One player will select a number and both the players should strike the numbers in their sheets.</p> 
+            <p>* When all the numbers diagonally or vertically or horizontally has been striked then one letter from bingo should be striked.</p>
+            <p>* Whoever strikes all the alphabets of the bingo first will be met with victory.</p>
+        </div>
+    </div>
+        <button id ="home">Home</button>
+	</nav>
+    
+    <div id="loading-page">
+       
+    </div>
+
+    <!-- Main Page -->
+    <div id="main-page">
+        <h1 id="heading" class="typing-effect">Welcome to the Bingo Game</h1>
+        <label for="players" class="text">Number of players :</label>
+        <input type="number" id="players" min="2" max="2"  placeholder="2">
+        <button id="start-button">Start</button>
+        <p id="message"></p>
+    </div> 
+
+    <!-- Game Page -->
+    <div id="game-page" >
+        <h1>Bingo Game</h1>
+
+        <div class="container"></div>
+    </div>
+
+    <!-- winning Page -->
+    <div id="congratsPage" style="display: none;">
+        <h1 id="last">Congratulations!</h1>
+        <p><span id="winnerName"></span> is the winner!</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

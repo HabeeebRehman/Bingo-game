@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Players profile</title>
+    <link rel="stylesheet" href="./player.css">
+    <link rel="icon" type="image/x-icon" href="./Assets/logo.jpg">
+</head>
+<body>
+   <div id="credentials">
+    <h2>Player's profile</h2>
+    <form id="form">  
+       
+        <p id="p1">Player-1</p>
+        <input type="text" placeholder="Name" id="player1name" required>
+        <input type="text" placeholder="Nick Name" id="player1nick" required>
+    
+        <p id="p2">player-2</p>
+        <input type="text" placeholder="Name" id="player2name" required>
+        <input type="text" placeholder="Nick Name" id="player2nick" required>
+        <br>
+        <button type="submit">Enter</button>
+      
+
+    </form>
+   </div> 
+   
+</body>
+<script>
+      document.getElementById("form").onsubmit = (e) => {
+      e.preventDefault();
+
+      let name1 = document.getElementById("player1name").value;
+      let nickName1 = document.getElementById("player1nick").value;
+      let name2 = document.getElementById("player2name").value;
+      let nickName2 = document.getElementById("player2nick").value;
+
+      localStorage.setItem("name1", name1);
+      localStorage.setItem("nickName1", nickName1);
+      localStorage.setItem("name2", name2);
+      localStorage.setItem("nickName2", nickName2);
+      window.location.href = "./game.html"
+    };
+</script>
+</html>
